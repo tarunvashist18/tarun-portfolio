@@ -88,7 +88,7 @@ function App() {
   }
 
   return (
-    <div className="portfolio">
+    <><div className="portfolio">
       <div className="ambient ambient-one" />
       <div className="ambient ambient-two" />
 
@@ -460,23 +460,31 @@ function App() {
               in cloud engineering, DevOps, and software development.
             </p>
 
-            <a className="button button-primary" href={`mailto:${EMAIL}`}>
+             <a
+              className="button button-primary"
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(EMAIL)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Email Me <span>↗</span>
             </a>
 
-            <div className="contact-links">
-              <a href={GITHUB_URL} target="_blank" rel="noreferrer">
-                GitHub ↗
-              </a>
-              <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
-                LinkedIn ↗
-              </a>
-              <a href={`mailto:${EMAIL}`}>Email ↗</a>
-              <a href={RESUME_URL} download="Tarun_Kumar_Vashisth_Resume.pdf">
-                Resume ↓
-              </a>
-            </div>
+            
+
+          <div className="contact-links">
+            <a href={GITHUB_URL} target="_blank" rel="noreferrer">
+              GitHub ↗
+            </a>
+            <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
+              LinkedIn ↗
+            </a>
+            <a href={`mailto:${EMAIL}`}>Email ↗</a>
+            <a href={RESUME_URL} download="Tarun_Kumar_Vashisth_Resume.pdf">
+              Resume ↓
+            </a>
           </div>
+        </div>
+      
         </section>
       </main>
 
@@ -492,6 +500,7 @@ function App() {
         <a href="#home">Back to top ↑</a>
       </footer>
     </div>
+    </>
   );
 }
 
